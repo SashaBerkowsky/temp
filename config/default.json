@@ -1,0 +1,6 @@
+{
+    "api": {
+        "host": "https://mwmrcpuzl0.execute-api.us-west-1.amazonaws.com"
+    },
+    "appName": "Overtime Basquet"
+}

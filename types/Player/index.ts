@@ -1,0 +1,20 @@
+export type Player = {
+    _id?: string;
+    player?: string;
+    name?: string;
+    picture?: string;
+    captain?: boolean;
+    played?: number;
+    pt1?: number | string;
+    pt2?: number | string;
+    pt3?: number | string;
+    points?: number | string;
+    fouls?: number | string;
+    assists?: number | string;
+    rebounds?: number | string;
+    steals?: number | string;
+    mvp?: boolean | string;
+    totalScore?: number | string;
+    isPresent?: boolean;
+    team?: string;
+};

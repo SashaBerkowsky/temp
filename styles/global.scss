@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./colors";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: $principalOrange;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+.ant-menu-item {
+  width: auto !important;
+}
+.ant-menu-submenu-arrow {
+  color: $principalOrange !important;
+}
+@media (min-width: 1024px) {
+  .ant-menu-root {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.ant-tabs-ink-bar {
+  background: $principalOrange !important;
+}
+.ant-tabs {
+  background: $backgroundColor;
+  .ant-tabs-tab-btn {
+    color: $principalOrange;
+    text-transform: uppercase;
+  }
+}
+.ant-tabs-tab {
+  :hover {
+    color: $principalOrange;
+  }
+}
+.ant-tabs-tab-active {
+  .ant-tabs-tab-btn {
+    color: $principalOrange !important;
+  }
+}
+.ant-menu-inline {
+  background: $backgroundColor !important;
+  .ant-menu-title-content {
+    color: $principalOrange;
+  }
+}
+
+.containerModal {
+  backdrop-filter: blur(2px);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centeredModal {
+  border-radius: 5px;
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+.modalHeader {
+  display: flex;
+}
+
+header * {
+  font-family: var(--din-display);
+  font-weight: 600;
+}
+
+.helvetica {
+  font-family: var(--helvetica);
+}
+
+.tournamentList {
+
+  &::-webkit-scrollbar {
+   width: 0.7em;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(100,100,100,1);
+    border-radius: 3px;
+    height: 10%;
+
+   &:hover {
+    background: rgba(120,120,120,1);
+   }
+  }
+
+  ::-webkit-scrollbar-track-piece {
+    margin-top: 1rem;
+  }
+}
+
+.gradient-purple-dark-vertical {
+  background: rgb(59,51,106);
+  background: linear-gradient(180deg, #211e3a 0px, #292548 15px, #292548 calc(100% - 15px) , #211e3a 100%);
+}
+
+.gradient-negro-texto-dark-up {
+  background: #181525;
+  background: linear-gradient(180deg, #000000 0px, #181525 50%);
+}
+
+.gradient-naranja-opacity {
+  background: linear-gradient(90deg, rgba(255,59,47,0.2) 0%, rgba(43, 22, 31, 1) 100%);
+}
+
+.gradient-naranja-opacity-invert {
+  background: linear-gradient(90deg, rgba(43, 22, 31, 1) 0%, rgba(255,59,47,0.2) 100%);
+}
+
+.gradient-violeta-opacity {
+  background: linear-gradient(90deg, rgba(59, 51, 106, 0.2) 0%, #181525 100%);
+}
+
+.gradient-violeta-opacity-invert {
+  background: linear-gradient(90deg, #181525 0%, rgba(59, 51, 106, 0.2) 100%);
+}
+
+.gradient-blanco-vertical {
+  background: #dad8d8;
+  background: linear-gradient(180deg, #dad8d8 0px, #E5E5E5 15px,  #E5E5E5 100%);
+}
+
+.triangulo {
+  background: linear-gradient(to bottom right, transparent 0%, transparent 50%, rgba(59, 51, 106, 0) 50%, #181525 100%);
+  transform: rotate(45deg);
+}
+
+.fadeIn { 
+  animation: fadeIn 1s;
+}
+
+.fadeOut { 
+  animation: fadeOut 1s; 
+  animation-fill-mode: forwards
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% { 
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { 
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+button, li {
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.pts {
+  -webkit-transform: skew(150deg, 0deg);
+              -ms-transform: skew(150deg, 0deg);
+               -o-transform: skew(150deg, 0deg);
+                  transform: skew(150deg, 0deg);
+}

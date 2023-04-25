@@ -1,0 +1,162 @@
+@import "../../styles/breakpoints";
+
+.fixtureComponent__container {
+  display: flex;
+  justify-content:center; 
+  gap: 3em;
+  width: 100%;
+
+  @media screen and (max-width: $xl) {
+    flex-direction: row;
+    justify-content: center;
+  }
+  @media screen and (max-width: $lg) {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  h2 {
+    font-size: 26px;
+    font-family: var(--helvetica);
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 16px;
+    font-family: var(--helvetica);
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .fixtureComponent__zoneheader {
+    padding-bottom: 20px;
+  }
+
+  .fixtureComponent__matches {
+    width: 51%;
+    @media screen and (max-width: $xxl) {
+      flex-grow: 0.8;
+    }
+    @media screen and (max-width: $xl) {
+      width: 10%;
+    }
+    @media screen and (max-width: $lg) {
+      width: 90%;
+    }
+    @media screen and (max-width: 450px) {
+      width: 100%;
+    }
+    .fixtureComponent__section {
+      min-height: 256px;
+      padding-bottom: 4%;
+
+      .fixtureComponent__stageContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: flex-start;
+        max-width: 960px;
+        margin: 0 auto;
+        @media screen and (max-width: $xl) {
+          justify-content: center
+        }
+      }
+      .fixtureComponent__break {
+        flex-basis: 100%;
+        height: 0;
+      }
+
+      .fixtureComponent__picker{
+        margin: 25px 0;
+        @media screen and (max-width: 450px) {
+          padding: 0 5%;
+        }
+      }
+    }
+  }
+  .fixtureComponent__gallerycont {
+    display: block;
+    width: 18%;
+    text-align: center;
+    button  {
+      margin-top: 10px;
+      font-family: var(--din-display);
+      font-size: 15px;
+      text-transform: uppercase;
+      background-color: #ff3b2f;
+      border: none;
+      border-radius: 4px;
+      color: black;
+      padding: 15px 36px;
+    }
+    .fixtureComponent__galleryprev {
+      margin-top: 40px;
+      width: 100%;
+
+      .fixtureComponent__galleryimg {
+        padding-bottom: 5px;
+      }
+    }
+    @media screen and (max-width: $xl) {
+      width: 30%;
+    }
+    @media screen and (max-width: $lg) {
+      width: 80%;
+    }
+  }
+  .previewScroll {
+    margin: 0 auto;
+    display: flex;
+    overflow: hidden;
+    padding: 0 10px;
+    gap: 1.4em;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    scroll-snap-type: x proximity;
+    @media screen and (max-width: 1200px) {
+      width: 470px;
+    }
+    @media screen and (max-width: 450px) {
+      width: 375px;
+      padding: 0 10px; 
+    }
+    .previewScroll::-webkit-scrollbar {
+    display: none; 
+  }
+  }
+  .fixtureComponent__preview {
+      display: flex;
+      
+    }
+  .fixtureComponent__scrollbar {
+    margin: auto;
+    display: flex;
+    width: 100%;
+    height: 16px;
+    margin-top: 5px;
+    margin-bottom: 9px;
+    gap: 0.2em;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      height: 6px;
+      width: 30px;
+      border-radius: 8px;
+    }
+    
+    .fixtureComponent__scrollitemS {
+      background-color: #ff3b2f;
+      cursor: pointer;
+    }
+
+    .fixtureComponent__scrollitem {
+      background-color: #2b161f;
+      cursor: pointer;
+    }
+  }
+
+}
